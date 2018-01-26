@@ -24,7 +24,7 @@ axios.interceptors.request.use((config) => {
 
 axios.interceptors.response.use(function (res) {
   loadingInstance.close()
-  if (res.data.errorcode === 'E11001') {
+  if (res.data.errorcode === envConfig.errorCode) {
     router.push({
       path: '/login'
     })

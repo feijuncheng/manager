@@ -18,6 +18,20 @@ export const login = (obj) => {
 }
 
 /**
+ * 验证是否登录
+ */
+export const checkLogin = () => {
+  // return axios.post('/member/v1/checkLogin', {})
+  return new Promise(function (resolve) {
+    resolve({
+      status: true,
+      data: {
+      }
+    })
+  })
+}
+
+/**
  * 查询的接口
  */
 export const getOrderList = (obj) => {
